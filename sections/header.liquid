@@ -1,0 +1,56 @@
+<header class="full-width">
+  <div id="sign-up-banner" class="w-full bg-black py-2.5">
+    <div class="shopify-section text-white text-center text-sm">
+      <div class="relative flex items-center justify-center gap-2">
+        <div>
+          Sign up and get 20% off to your first order.
+          <b><a href="{{ routes.account_register_url  }}" class="underline">Sign Up Now</a></b>
+        </div>
+        <img
+          id="img-close"
+          class="block sm:absolute top-1/2 right-0 sm:-translate-y-1/2 cursor-pointer shrink-0"
+          width="13.13px"
+          height="13.13px"
+          src="{{ 'svg/x.svg' | asset_url }}"
+          alt="X Icon"
+        >
+      </div>
+    </div>
+  </div>
+  <div class="my-6! shopify-section">
+    <div>
+      <img
+        width="126px"
+        height="22px"
+        src="{{ 'img/SHOP.CO.png' | asset_url }}"
+        alt="LOGO"
+      >
+    </div>
+  </div>
+  {% comment %}
+    <h2 class="header__title">
+      {{ shop.name | link_to: routes.root_url }}
+    </h2>
+    <div class="header__icons">
+      {% if shop.customer_accounts_enabled %}
+        {{ 'icon-account.svg' | inline_asset_content | link_to: routes.account_url }}
+      {% endif %}
+
+      <a href="{{ routes.cart_url }}">
+        {% if cart.item_count > 0 %}
+          <sup>{{ cart.item_count }}</sup>
+        {% endif %}
+
+        {{ 'icon-cart.svg' | inline_asset_content }}
+      </a>
+    </div>
+  {% endcomment %}
+</header>
+
+<script src="{{ 'js/sections/header.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "t:general.header"
+}
+{% endschema %}

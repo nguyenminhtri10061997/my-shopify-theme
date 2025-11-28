@@ -1,9 +1,9 @@
 {
   "scripts": {
-    "tw-watch": "npx @tailwindcss/cli -i ./assets/index.css -o ./assets/index-build.css --watch"
+    "tw-watch": "npx @tailwindcss/cli -i ./assets/css/index.css -o ./assets/css/index-build.css --watch"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.16",
-    "tailwindcss": "^4.1.16"
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
   }
 }

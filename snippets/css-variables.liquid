@@ -1,26 +1,26 @@
 {% style %}
   @font-face {
     font-family: 'ABeeZee';
-    src: url("{{ 'ABeeZee-Regular.ttf' | asset_url }}") format('truetype');
+    src: url("{{ 'fonts/ABeeZee-Regular.ttf' | asset_url }}") format('truetype');
     font-weight: 400;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'ABeeZee';
-    src: url("{{ 'ABeeZee-Italic.ttf' | asset_url }}") format('truetype');
+    src: url("{{ 'fonts/ABeeZee-Italic.ttf' | asset_url }}") format('truetype');
     font-weight: 400;
     font-style: italic;
   }
 
-    :root {
-      --font-primary--family: 'ABeeZee', sans-serif;
-      --font-primary--weight: 400;
-      --font-primary--style: normal;
-      --page-width: {{ settings.max_page_width }};
-      --page-margin: {{ settings.min_page_margin }}px;
-      --color-background: {{ settings.background_color }};
-      --color-foreground: {{ settings.foreground_color }};
-      --style-border-radius-inputs: {{ settings.input_corner_radius }}px;
-    }
+  :root {
+    --font-primary--family: ABeeZee;
+    --font-primary--weight: 400;
+    --font-primary--style: normal;
+    --page-width: {{ settings.max_page_width }};
+    --page-margin: {{ settings.min_page_margin }}px;
+    --color-background: {{ settings.background_color }};
+    --color-foreground: {{ settings.foreground_color }};
+    --style-border-radius-inputs: {{ settings.input_corner_radius }}px;
+  }
 {% endstyle %}
